@@ -1170,7 +1170,7 @@ body {
   /* ==== About.html ==== */
 
   .about-a {
-    border: 1px solid green;
+    /* border: 1px solid green; */
     width: 80vw;
     justify-self: center;
   }
@@ -1191,7 +1191,7 @@ body {
   }
 
   .about-b-txt {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 100%;
   }
 

@@ -4,6 +4,9 @@
 }
 body {
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
   /* border: 2px solid red; */
   /* width: 100%;   */
   /* flex-wrap: wrap; */
@@ -29,7 +32,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 
 .navigation-list a {
@@ -69,7 +72,6 @@ body {
   line-height: 1.5;
   text-align: center;
 }
-
 
 .section-a {
   /* border: 2px solid rgb(39, 38, 38); */
@@ -324,7 +326,6 @@ h1 {
 }
 
 .part-author img {
-  
   border-radius: 100%;
 }
 
@@ -333,6 +334,7 @@ h1 {
   background-color: rgb(39, 38, 38);
   color: white;
   height: auto;
+  margin-top: auto;
 }
 
 .navigation-footer {
@@ -706,16 +708,7 @@ form {
   color: rgb(126, 125, 125);
 }
 
-/* * {
-  box-sizing: border-box;
-  font-family: system-ui, sans-serif;
-}
 
-body {
-  background: #f8fafc;
-  margin: 0;
-  padding: 60px 20px;
-} */
 
 .pricing {
   /* border: 2px solid black; */
@@ -726,7 +719,6 @@ body {
   max-width: 1400px;
   width: 84%;
 }
-
 
 .subtitle {
   color: #6b7280;
@@ -741,7 +733,6 @@ body {
   width: auto;
   gap: 40px;
   justify-content: center;
- 
 }
 
 .card {
@@ -829,8 +820,151 @@ body {
   color: #fff;
 }
 
+/* ===== faq.html ===== */
+/* .faq {
+  border: 2px solid red;
+} */
+
+.faq-wrap {
+  /* border: 2px solid green; */
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 65px;
+  padding-left: 5px;
+  padding-right: 5px;
+  max-width: 1400px;
+  width: 84%;
+}
+
+.faq-in {
+  /* border: 2px solid red; */
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: space-between; */
+  margin-top: 20px;
+  gap: 50px;
+}
+.faq-inn {
+  /* border: 2px solid yellow; */
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  gap: 30px;
+}
+
+.faq-inn h2 {
+  font-size: 35px;
+  font-family: cursive;
+}
+
+.faq-first {
+  text-align: center;
+  /* line-height: 0.5; */
+}
+.faq-first h1{
+  /* border: 1px solid #2563eb; */
+margin-bottom: 0;
+  text-align: center;
+  /* font-size: 45px; */
+font-family: cursive;
+}
+
+.faq-first p{
+  font-size: 22px;
+  color: #6b7280;
+}
+
+.accordion {
+  /* max-width: 800px; */
+  /* margin: auto; */
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: -35px;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #dee2e6;
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-item input {
+  display: none;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  cursor: pointer;
+  background: #f1f3f6;
+  /* font-weight: 500; */
+  /* color: #0d6efd; */
+}
+.accordion-header:hover {
+  background: #dde2e6;
+}
+
+.accordion-body {
+  max-height: 0;
+  line-height: 1.5;
+  overflow: hidden;
+  padding: 0 16px;
+  transition: all 0.8s ease;
+}
+.accordion-item input:checked ~ .accordion-body {
+  max-height: 400px;
+  padding: 16px;
+} 
+
+.icon {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  width: 20px;
+}
+
+.icon::after {
+  content: "▾";
+  width: 10px;
+}
+
+.accordion-item input:checked + .accordion-header .icon {
+  transform: rotate(180deg);
+}
+
+.faq-questions{
+  text-align: center;
+  background-color: #e2e5ea;
+  height: fit-content;
+  width: 300px;
+  margin-top: 95px;
+   padding: 50px;
+  border-radius: 6px;
+}
+
+.faq-icons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.faq-icons a {
+  font-size: 24px;
+  color: #222;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.faq-icons a:hover {
+  color: #0d6efd;
+  transform: scale(1.2);
+}
 /* ===== RESPONSIVE CARDS For Tablets ===== */
-@media screen and (min-width: 600px) and (max-width: 1024px) {
+@media screen and (min-width: 701px) and (max-width: 1024px) {
   .hero-section {
     /* border: 1px solid white; */
     flex-direction: column;
@@ -950,31 +1084,48 @@ body {
 
   /* ==== Contact ==== */
   .contact-a-inn {
-  /* border: 1px solid blue; */
-  width: 65%;
-}
+    /* border: 1px solid blue; */
+    width: 65%;
+  }
 
-.contact-a-inner h2 {
-  /* border: 1px solid green; */
-  font-size: 30px;}
+  .contact-a-inner h2 {
+    /* border: 1px solid green; */
+    font-size: 30px;
+  }
 
-/* ==== Pricing ==== */
+  /* ==== Pricing ==== */
 
-.pricing-grid{
+  .pricing-grid {
+    flex-direction: column;
+    gap: 40px;
+    width: 80vw;
+  }
+
+  .card,
+  .features {
+    width: 100%;
+  }
+
+/* ===== FAQ ===== */
+.faq-in{
+  display: flex;
   flex-direction: column;
-  gap: 40px;
-  width: 80vw;
 }
 
-.card,
-.features {
+.faq-inn{
+  
+  width: 100%;
+}
+
+.faq-questions{
   width: 100%;
 }
 
 }
 
+
 /* ===== RESPONSIVE CARDS For Mobiles ===== */
-@media screen and (min-width: 200px) and (max-width: 599px) {
+@media screen and (min-width: 200px) and (max-width: 700px) {
   .navigation {
     flex-direction: row;
     justify-content: space-between;
@@ -991,6 +1142,12 @@ body {
     text-decoration: none;
   }
 
+  .home-icon button{
+    height: 35px;
+    width: 40px;
+  }
+
+
   .home-icon:hover .home-icon-list {
     display: block;
   }
@@ -998,7 +1155,7 @@ body {
   .home-icon-list {
     display: none;
     position: absolute;
-    top: 10px;
+    top: 15px;
     right: -1px;
     background-color: rgb(56, 55, 53);
     width: 100px;
@@ -1116,10 +1273,8 @@ body {
 
   .section-ci {
     /* border: 1px solid black; */
-    /* margin: 0 auto; */
-    justify-content: space-evenly;
     width: 71vw;
-    /* gap: 8px; */
+    /* gap: 10px; */
   }
   .section-ci span {
     font-size: 14px;
@@ -1197,24 +1352,36 @@ body {
 
   /* ==== Contact ==== */
   .contact-a-inn {
+    width: 95%;
+  }
 
-  width: 95%;
+  .contact-a-inner h2 {
+    font-size: 30px;
+  }
+
+  /* ==== Pricing ==== */
+
+  .pricing-grid {
+    /* flex-direction: column; */
+    gap: 40px;
+  }
+
+  .pricing h1 {
+    font-size: 30px;
+    margin-bottom: 5px;
+  }
+
+  /* ===== FAQ ===== */
+.faq-in{
+  display: flex;
+  flex-direction: column;
 }
 
-.contact-a-inner h2 {
-  
-  font-size: 30px;}
-
-/* ==== Pricing ==== */
-
-.pricing-grid{
-  /* flex-direction: column; */
-  gap: 40px;}
-
-.pricing h1 {
-  font-size: 30px;
-  margin-bottom: 5px;
+.faq-inn{
+  width: 100%;
 }
 
-
+.faq-questions{
+  width: 100%;
+}
 }
